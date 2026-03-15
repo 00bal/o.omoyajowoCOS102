@@ -1,7 +1,6 @@
 import numpy as np
 
 def solve_equations():
-    print("--- Equation Root Finder ---")
     print("1. Quadratic (Ax² + Bx + C = 0)")
     print("2. Cubic (Ax³ + Bx² + Cx + D = 0)")
     print("3. Quartic (Ax⁴ + Bx³ + Cx² + Dx + E = 0)")
@@ -36,12 +35,10 @@ def solve_equations():
         print("Invalid choice!")
         return
 
-    # NumPy finds all roots (including imaginary ones) automatically
     roots = np.roots(coeffs)
 
     print("\nThe roots are:")
     for i, root in enumerate(roots, 1):
-        # We round to 2 decimal places to keep it clean
         print(f"Root {i}: {np.round(root, 2)}")
 
 # Run the program
